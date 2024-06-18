@@ -1,2 +1,3 @@
 # the-daily-grind
-Interview prep coding tasks to make you want to break your computer.
+
+Interview prep coding tasks that make you question your life choices.
