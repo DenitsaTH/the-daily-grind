@@ -5,12 +5,10 @@ Note that you must do this in-place without making a copy of the array.'''
 class Solution:
     def moveZeroes(self, nums):
 
-        curr_zero_seq = 0
+        zeros = 0
 
         for i in range(len(nums)):
-            
             if nums[i] != 0:
-                for k in range(curr_zero_seq):
-                    nums[i-k], nums[i-1-k] = nums[i-1-k], nums[i-k]
+                nums[i], nums[i-zeros] = nums[i-zeros], nums[i]
             else:
-                curr_zero_seq += 1
+                zeros += 1
