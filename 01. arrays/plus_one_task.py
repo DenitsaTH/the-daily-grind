@@ -8,7 +8,7 @@ Increment the large integer by one and return the resulting array of digits.'''
 
 
 class Solution:
-    def plusOne(self, digits: List[int]) -> List[int]:
+    def plusOne(self, digits):
         if digits[-1] != 9:
             digits[-1] += 1
             

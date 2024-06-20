@@ -4,7 +4,7 @@ and return false if every element is distinct.'''
 # Version 1: use set to keep track of duplicates
 
 class Solution:
-    def containsDuplicate(self, nums) -> bool:
+    def containsDuplicate(self, nums):
         duplicates = set()
 
         for i in range(len(nums)):
