@@ -16,11 +16,11 @@ LEFT, DOWN, RIGHT, UP = 1, 2, 3, 4
 directions = {
     RIGHT: (0, 1),
     DOWN: (1, 0),
-    LEFT: (0,-1),
+    LEFT: (0, -1),
     UP: (-1, 0)
 }
 
-direction,count = LEFT, 1
+direction, count = LEFT, 1
 row, col = 0, 0
 
 while count <= size ** 2:

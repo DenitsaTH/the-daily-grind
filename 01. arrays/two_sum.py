@@ -16,7 +16,7 @@ class Solution:
 
             if res in vals:
                 return [i, vals[res]]
-            
+
             vals[nums[i]] = i
 
 
@@ -53,6 +53,5 @@ class Solution:
 
             if found is not None:
                 return [nums_with_indices[i][1], found]
-    
+
         return []
-        

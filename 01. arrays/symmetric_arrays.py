@@ -7,7 +7,7 @@ def is_symmetric(arr):
     for k in range(mid):
         if not arr[k] == arr[-k-1]:
             return 'No'
-    
+
     return 'Yes'
 
 

@@ -7,8 +7,8 @@ from typing import List
 
 class Solution:
     def rotate(self, nums, k):
-        
+
         n = len(nums)
         k = k % n  # handles k larger than list length
-        
+
         nums[:] = nums[-k:] + nums[:-k]

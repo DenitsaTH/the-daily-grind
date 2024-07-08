@@ -7,8 +7,7 @@ Each of the nine 3 x 3 sub-boxes of the grid must contain the digits 1-9 without
 
 class Solution:
     def isValidSudoku(self, board) -> bool:
-        rows, cols = 9,9
-        
+        rows, cols = 9, 9
 
         for i in range(rows):
             control_set = set()
@@ -20,7 +19,6 @@ class Solution:
                 else:
                     control_set.add(board[i][j])
 
-
         for i in range(cols):
             control_set = set()
             for j in range(rows):
@@ -30,7 +28,6 @@ class Solution:
                     return False
                 else:
                     control_set.add(board[j][i])
-
 
         for row in range(0, rows, 3):
             for col in range(0, cols, 3):

@@ -14,7 +14,6 @@ class Solution:
             else:
                 vals_count[s[i]] = None
 
-
         for v in vals_count.values():
             if v is not None:
                 return v

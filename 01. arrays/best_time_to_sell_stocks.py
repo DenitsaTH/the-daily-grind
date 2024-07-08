@@ -6,9 +6,10 @@ However, you can buy it then immediately sell it on the same day.
 
 Find and return the maximum profit you can achieve.'''
 
+
 class Solution:
     def maxProfit(self, prices):
-        
+
         score = 0
         curr_bought = None
         curr_max = 0
@@ -40,5 +41,4 @@ class Solution:
                 score += curr_max - curr_bought
                 curr_bought, curr_max = None, 0
 
-                
         return score

@@ -3,6 +3,7 @@ and return false if every element is distinct.'''
 
 # Version 1: use set to keep track of duplicates
 
+
 class Solution:
     def containsDuplicate(self, nums):
         duplicates = set()
@@ -12,7 +13,7 @@ class Solution:
                 return True
 
             duplicates.add(nums[i])
-            
+
         return False
 
 
@@ -21,9 +22,9 @@ class Solution:
 class Solution:
     def containsDuplicate(self, nums) -> bool:
         nums.sort()
-        
+
         for i in range(1, len(nums)):
             if nums[i] == nums[i-1]:
                 return True
-        
+
         return False

@@ -11,7 +11,7 @@ class Solution:
     def plusOne(self, digits):
         if digits[-1] != 9:
             digits[-1] += 1
-            
+
         else:
             for num in range(len(digits) - 1, -1, -1):
                 if digits[num] == 9:
@@ -21,5 +21,5 @@ class Solution:
                     break
             else:
                 digits.insert(0, 1)
-                
+
         return digits
