@@ -44,7 +44,6 @@ class Solution:
 
 # ------ Version 2 -- Two-pointer approach -- O(1) space ------
 
-
 def isPalindrome(self, head) -> bool:
 
     # reverse the list
