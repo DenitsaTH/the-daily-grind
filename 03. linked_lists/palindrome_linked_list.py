@@ -1,14 +1,14 @@
 '''Given the head of a singly linked list, return true if it is a palindrome or false otherwise.'''
 
-# ------ Version 1 -- Create a new reversed list and check if the lists are the same -- O(n) space ------
-
 import copy
-
 
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
+
+
+# ------ Version 1 -- Create a new reversed list and check if the lists are the same -- O(n) space ------
 
 
 class Solution:
@@ -44,46 +44,47 @@ class Solution:
 
 # ------ Version 2 -- Two-pointer approach -- O(1) space ------
 
-def isPalindrome(self, head) -> bool:
+class Solution:
+    def isPalindrome(self, head) -> bool:
 
-    # reverse the list
-    def reverseList(list):
-        prev = None
-        curr = list
+        # reverse the list
+        def reverseList(list):
+            prev = None
+            curr = list
 
-        while curr:
+            while curr:
 
-            old_next = curr.next
-            curr.next = prev
-            prev = curr
-            curr = old_next
+                old_next = curr.next
+                curr.next = prev
+                prev = curr
+                curr = old_next
 
-        return prev
+            return prev
 
-    # find the end of the first half
-    def find_first_half_end(head):
-        slow = head
-        fast = head
+        # find the end of the first half
+        def find_first_half_end(head):
+            slow = head
+            fast = head
 
-        # when fast is at the end, slow would be in the middle
-        while fast.next and fast.next.next:
-            slow = slow.next
-            fast = fast.next.next
-        return slow
+            # when fast is at the end, slow would be in the middle
+            while fast.next and fast.next.next:
+                slow = slow.next
+                fast = fast.next.next
+            return slow
 
-    first_half_end = find_first_half_end(head)
+        first_half_end = find_first_half_end(head)
 
-    # reverse the second hald
-    second_half_start = reverseList(first_half_end.next)
+        # reverse the second hald
+        second_half_start = reverseList(first_half_end.next)
 
-    pointer1, pointer2 = head, second_half_start
-    res = True
+        pointer1, pointer2 = head, second_half_start
+        res = True
 
-    # compare the two halves
-    while res and pointer2:
-        if pointer1.val != pointer2.val:
-            res = False
+        # compare the two halves
+        while res and pointer2:
+            if pointer1.val != pointer2.val:
+                res = False
 
-        pointer1, pointer2 = pointer1.next, pointer2.next
+            pointer1, pointer2 = pointer1.next, pointer2.next
 
-    return res
+        return res
