@@ -3,11 +3,12 @@
 Follow up: If this function is called many times, how would you optimize it?
 '''
 
+cache = {}
+
 
 class Solution:
     def hammingWeight(self, n: int) -> int:
         res = 0
-        cache = {n: res}
         m = n
 
         while m > 0:
