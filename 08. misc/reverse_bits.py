@@ -15,12 +15,12 @@ class Solution:
             last_bit = n & 1
 
             # shift result to the left
-            result = (result << 1) | last_bit
+            res = (res << 1) | last_bit
 
             # Shifts the bits of the number to the right and fills 0 on voids left
             n >>= 1
 
-        return result
+        return res
 
 
 # ----------- Version 2 -----------
