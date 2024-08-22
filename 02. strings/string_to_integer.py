@@ -13,7 +13,8 @@ Specifically, integers less than -231 should be rounded to -231, and integers gr
 Return the integer as the final result.'''
 
 
-#------- Version 1 -------
+# ----------- Version 1 -----------
+
 class Solution:
     def myAtoi(self, s: str) -> int:
 
@@ -57,17 +58,18 @@ class Solution:
         return res
 
 
-#------- Version 2 -------
+# ----------- Version 2 -----------
+
 class Solution:
     def myAtoi(self, s: str) -> int:
-        
+
         INT_MAX = 2**31 - 1
         INT_MIN = -2**31
 
         s = s.strip()
         if not s:
             return 0
-        
+
         sign = 1
         i = 0
         if s[0] == '+':
@@ -93,5 +95,3 @@ class Solution:
             return INT_MAX
 
         return res
-
-

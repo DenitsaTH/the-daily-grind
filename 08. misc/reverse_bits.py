@@ -24,6 +24,7 @@ class Solution:
 
 
 # ----------- Version 2 -----------
+
 cache = {}
 
 

@@ -3,7 +3,8 @@ Return true if there is a cycle in the linked list. Otherwise, return false.'''
 
 from test_funcs import createLinkedList
 
-# ------ Version 1 -- Use set() to keep track of already passed Nodes -- O(n) space ------
+# Version 1: use set() to keep track of already passed Nodes -> O(n) space
+
 
 class Solution:
     def hasCycle(self, head):
@@ -23,13 +24,13 @@ class Solution:
         return False
 
 
-# ------ Version 2 -- Two-pointer approach -- O(1) space ------
+# Version 2: two-pointer approach -> O(1) space
 
 def hasCycle(head):
 
     if not head or not head.next:
         return False
-    
+
     fast = slow = head
 
     while fast and fast.next:
@@ -43,7 +44,7 @@ def hasCycle(head):
     return False
 
 
-# Test
+# test
 
 lst = createLinkedList([1], -1)
 print(hasCycle(lst))

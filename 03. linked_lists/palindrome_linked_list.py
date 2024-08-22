@@ -2,14 +2,14 @@
 
 import copy
 
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
 
 
-# ------ Version 1 -- Create a new reversed list and check if the lists are the same -- O(n) space ------
-
+# Version 1: create a new reversed list and check if the lists are the same -> O(n) space
 
 class Solution:
     def isPalindrome(self, head) -> bool:
@@ -42,7 +42,7 @@ class Solution:
         return True
 
 
-# ------ Version 2 -- Two-pointer approach -- O(1) space ------
+# Version 2 -> two-pointer approach -> O(1) space
 
 class Solution:
     def isPalindrome(self, head) -> bool:

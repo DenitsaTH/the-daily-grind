@@ -2,8 +2,8 @@
 
 Given two integers x and y, return the Hamming distance between them.'''
 
-# ----------- Version 1 -----------
 
+# ----------- Version 1 -----------
 
 class Solution:
     def hammingDistance(self, x: int, y: int) -> int:
@@ -12,8 +12,8 @@ class Solution:
         # Count the number of 1s which gives the number of differing bits
         return bin(diff).count('1')
 
-# ----------- Version 2 -----------
 
+# ----------- Version 2 -----------
 
 class Solution:
     def hammingDistance(self, x: int, y: int) -> int:
