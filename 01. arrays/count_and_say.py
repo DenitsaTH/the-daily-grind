@@ -61,13 +61,14 @@ class Solution:
         previous_seq = self.countAndSay(n - 1)
 
         res = ""
-        i = 0
-        while i < len(previous_seq):
-            count = 1
-            while i + 1 < len(previous_seq) and previous_seq[i] == previous_seq[i + 1]:
-                i += 1
+        count = 1
+
+        for i in range(len(previous_seq)):
+            if i + 1 < len(previous_seq) and previous_seq[i] == previous_seq[i+1]:
                 count += 1
-            res += str(count) + previous_seq[i]
-            i += 1
+
+            else:
+                res += str(count) + previous_seq[i]
+                count = 1
 
         return res
